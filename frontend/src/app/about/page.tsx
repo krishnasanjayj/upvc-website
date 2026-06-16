@@ -51,7 +51,7 @@ export default function About() {
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Our Story</h2>
           <p className="text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
-            V-Tech Profiles was founded with a singular vision: to replace noisy, drafty, and high-maintenance wood and metal window frames with modern, energy-efficient uPVC systems. Since our inception, we have installed over 50,000 windows and doors across residences, offices, and commercial establishments in Tamil Nadu.
+            Shasti Doors and Windows was founded with a singular vision: to replace noisy, drafty, and high-maintenance wood and metal window frames with modern, energy-efficient uPVC systems. Since our inception, we have installed over 50,000 windows and doors across residences, offices, and commercial establishments in Tamil Nadu.
           </p>
           <p className="text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
             We operate out of our modern 15,000 sq.ft. automated factory in Ambattur, Chennai. By sourcing lead-free uPVC raw profiles and integrating premium steel reinforcements, we ensure every product represents the peak of structural durability.

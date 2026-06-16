@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Premium uPVC Doors & Windows Solutions | V-Tech Profiles",
+  title: "Premium uPVC Doors & Windows Solutions | Shasti Doors and Windows",
   description: "Manufactures, supplies, and installs custom, energy-efficient, weather-resistant uPVC doors and windows. Get an instant quote online.",
   keywords: [
     "uPVC Doors", "uPVC Windows", "Sliding Windows", "Casement Windows", 
     "uPVC Installation", "Custom uPVC Doors", "uPVC Doors and Windows Near Me"
   ],
   openGraph: {
-    title: "Premium uPVC Doors & Windows Solutions | V-Tech Profiles",
+    title: "Premium uPVC Doors & Windows Solutions | Shasti Doors and Windows",
     description: "German-engineered custom uPVC window and door systems with real-time quotation calculator.",
     url: "https://upvcwebsite.com",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1200,
         height: 630,
-        alt: "V-Tech Profiles uPVC Installation",
+        alt: "Shasti Doors and Windows uPVC Installation",
       }
     ]
   }

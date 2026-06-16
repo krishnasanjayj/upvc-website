@@ -20,7 +20,7 @@ export default function Footer() {
                 uP
               </div>
               <span className="font-bold text-lg text-white tracking-tight">
-                V-Tech Profiles
+                Shasti Doors and Windows
               </span>
             </Link>
             <p className="text-sm text-slate-400">
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} V-Tech Profiles. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Shasti Doors and Windows. All rights reserved.</p>
           <div className="flex space-x-4">
             <Link href="/contact" className="hover:underline hover:text-slate-400">{t('nav.contact')}</Link>
             <Link href="/admin" className="hover:underline hover:text-slate-400">{t('nav.admin')}</Link>

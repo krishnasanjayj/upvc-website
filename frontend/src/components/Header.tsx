@@ -79,7 +79,7 @@ export default function Header() {
             uP
           </div>
           <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-amber-500">
-            V-Tech Profiles
+            Shasti Doors and Windows
           </span>
         </Link>
 
