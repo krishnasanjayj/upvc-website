@@ -5,7 +5,6 @@ import { LanguageProvider } from "../components/LanguageContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FloatingActions from "../components/FloatingActions";
-import ExitIntentPopup from "../components/ExitIntentPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,7 +57,6 @@ export default function RootLayout({
           </main>
           <Footer />
           <FloatingActions />
-          <ExitIntentPopup />
         </LanguageProvider>
       </body>
     </html>
