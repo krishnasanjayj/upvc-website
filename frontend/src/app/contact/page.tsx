@@ -68,13 +68,13 @@ export default function Contact() {
             <div className="space-y-4 text-sm">
               {/* Call */}
               <a 
-                href="tel:+919876543210" 
+                href="tel:+9194454 77574" 
                 className="flex items-center p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors border border-slate-100 dark:border-slate-700"
               >
                 <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3 shrink-0" />
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-slate-400">{t('contact.phoneTitle')}</span>
-                  <span className="font-semibold text-slate-800 dark:text-slate-200">+91 98765 43210</span>
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">+91 94454 77574</span>
                 </div>
               </a>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                 <Mail className="h-5 w-5 text-amber-500 mr-3 shrink-0" />
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-slate-400">{t('contact.emailTitle')}</span>
-                  <span className="font-semibold text-slate-800 dark:text-slate-200">info@upvcwebsite.com</span>
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">cndoorsandwindows@gmail.com</span>
                 </div>
               </a>
 
