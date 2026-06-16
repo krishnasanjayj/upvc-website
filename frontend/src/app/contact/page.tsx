@@ -110,7 +110,7 @@ export default function Contact() {
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-slate-400">{t('contact.addressTitle')}</span>
                   <span className="text-slate-800 dark:text-slate-200 leading-relaxed">
-                    104, SIDCO Industrial Estate, Ambattur, Chennai - 600098
+                     tirupur main Road,Avanashi,Tamil Nadu - 641654
                   </span>
                 </div>
               </div>
