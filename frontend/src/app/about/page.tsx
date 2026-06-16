@@ -54,7 +54,7 @@ export default function About() {
             Shasti Doors and Windows was founded with a singular vision: to replace noisy, drafty, and high-maintenance wood and metal window frames with modern, energy-efficient uPVC systems. Since our inception, we have installed over 50,000 windows and doors across residences, offices, and commercial establishments in Tamil Nadu.
           </p>
           <p className="text-sm text-slate-650 dark:text-slate-350 leading-relaxed">
-            We operate out of our modern 15,000 sq.ft. automated factory in Ambattur, Chennai. By sourcing lead-free uPVC raw profiles and integrating premium steel reinforcements, we ensure every product represents the peak of structural durability.
+            We operate out of our modern 15,000 sq.ft. automated factory in Avinashi. By sourcing lead-free uPVC raw profiles and integrating premium steel reinforcements, we ensure every product represents the peak of structural durability.
           </p>
         </div>
 
