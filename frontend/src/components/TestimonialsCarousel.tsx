@@ -23,7 +23,7 @@ const reviews: Review[] = [
   },
   {
     id: 2,
-    name: 'Priyanka Ram',
+    name: 'Priyanka Sasi',
     role: 'Interior Designer',
     rating: 5,
     content: 'As a designer, I am very picky about frame finishes. Their laminated wooden finish uPVC casement windows look premium and feel solid. Excellent hardware quality and seamless fit.',
