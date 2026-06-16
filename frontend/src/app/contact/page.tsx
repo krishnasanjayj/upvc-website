@@ -94,7 +94,7 @@ export default function Contact() {
 
               {/* Email */}
               <a 
-                href="mailto:info@upvcwebsite.com" 
+                href="mailto:cndoorsandwindows.com" 
                 className="flex items-center p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors border border-slate-100 dark:border-slate-700"
               >
                 <Mail className="h-5 w-5 text-amber-500 mr-3 shrink-0" />
