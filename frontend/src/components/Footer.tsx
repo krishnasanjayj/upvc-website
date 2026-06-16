@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-slate-900 text-slate-300 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+
           {/* Company Brief */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
@@ -88,18 +88,18 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-slate-400">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-amber-500 mr-2 shrink-0 mt-0.5" />
-                <span>104, SIDCO Industrial Estate, Ambattur, Chennai - 600098</span>
+                <span>Tirupur Main Road,Avinashi,Tamil Nadu 641654</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-amber-500 mr-2 shrink-0" />
                 <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210
+                  +91 94454 77574
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-amber-500 mr-2 shrink-0" />
-                <a href="mailto:info@upvcwebsite.com" className="hover:text-white transition-colors">
-                  info@upvcwebsite.com
+                <a href="mailto:cndoorsandwindows@gmail.com" className="hover:text-white transition-colors">
+                  cndoorsandwindows@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
