@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --primary: #1e3a8a; /* Slate blue */
+  --primary-hover: #172554;
+  --accent: #d97706; /* Amber gold */
+  --accent-hover: #b45309;
+  --muted: #64748b;
+  --muted-light: #f1f5f9;
+}
+
+.dark {
+  --background: #0b0f19;
+  --foreground: #f1f5f9;
+  --card: #111827;
+  --card-foreground: #f1f5f9;
+  --border: #1f2937;
+  --primary: #3b82f6; /* Bright blue */
+  --primary-hover: #60a5fa;
+  --accent: #f59e0b; /* Amber gold */
+  --accent-hover: #fbbf24;
+  --muted: #9ca3af;
+  --muted-light: #1f2937;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Utilities */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glassmorphism {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.clip-path-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}

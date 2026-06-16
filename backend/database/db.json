@@ -1,0 +1,249 @@
+{
+  "admin_users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password_hash": "$2a$10$vFoKo.KIpC1lmcJAeZUs.OuLhPV0ATzMu7IUhDd13GfO2Sr0PYwpi",
+      "created_at": "2026-06-16T10:39:10.624Z"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": 1,
+      "name": "Rajesh Kumar",
+      "email": "rajesh@example.com",
+      "phone": "+919876543210",
+      "message": "Looking for 3 double glazed sliding windows for my villa project in Chennai.",
+      "status": "NEW",
+      "created_at": "2026-06-15T10:39:10.624Z"
+    },
+    {
+      "id": 2,
+      "name": "Meena Sundaram",
+      "email": "meena.s@example.com",
+      "phone": "+919876543222",
+      "message": "Interested in French doors in custom brown frame for balcony.",
+      "status": "CONTACTED",
+      "created_at": "2026-06-14T10:39:10.624Z"
+    }
+  ],
+  "quotations": [
+    {
+      "id": 1,
+      "name": "Anand Loganathan",
+      "email": "anand.l@example.com",
+      "phone": "+919444012345",
+      "address": "12, Gandhi Street, Adyar",
+      "city": "Chennai",
+      "product_type": "WINDOW",
+      "product_style": "Sliding",
+      "width": 1500,
+      "height": 1200,
+      "quantity": 2,
+      "glass_type": "Double Glazed",
+      "frame_color": "White",
+      "hardware_quality": "Premium",
+      "product_cost": 32000,
+      "installation_cost": 3500,
+      "gst": 6390,
+      "total_estimate": 41890,
+      "status": "NEW",
+      "created_at": "2026-06-15T22:39:10.624Z"
+    },
+    {
+      "id": 2,
+      "name": "sanjay",
+      "email": "sanjay@gmail.com",
+      "phone": "34567956789",
+      "address": "coimbatore",
+      "city": "coimbatore",
+      "product_type": "DOOR",
+      "product_style": "French",
+      "width": 1200,
+      "height": 1200,
+      "quantity": 1,
+      "glass_type": "Clear Glass",
+      "frame_color": "White",
+      "hardware_quality": "Standard Quality",
+      "product_cost": 17280,
+      "installation_cost": 1152,
+      "gst": 3317.76,
+      "total_estimate": 21749.76,
+      "status": "NEW",
+      "created_at": "2026-06-16T10:46:20.127Z"
+    },
+    {
+      "id": 3,
+      "name": "sanjay",
+      "email": "sanjay@example.com",
+      "phone": "9876543210",
+      "address": "ECR",
+      "city": "Chennai",
+      "product_type": "WINDOW",
+      "product_style": "Sliding",
+      "width": 4498,
+      "height": 1200,
+      "quantity": 1,
+      "glass_type": "Clear Glass",
+      "frame_color": "White",
+      "hardware_quality": "Standard Quality",
+      "product_cost": 40482,
+      "installation_cost": 4318.08,
+      "gst": 8064.01,
+      "total_estimate": 52864.09,
+      "status": "NEW",
+      "created_at": "2026-06-16T10:51:34.517Z"
+    },
+    {
+      "id": 4,
+      "name": "sanjay",
+      "email": "sanjay@example.com",
+      "phone": "9876543210",
+      "address": "ECR",
+      "city": "Chennai",
+      "product_type": "WINDOW",
+      "product_style": "Sliding",
+      "width": 1500,
+      "height": 1500,
+      "quantity": 1,
+      "glass_type": "Clear Glass",
+      "frame_color": "White",
+      "hardware_quality": "Standard Quality",
+      "product_cost": 16875,
+      "installation_cost": 1800,
+      "gst": 3361.5,
+      "total_estimate": 22036.5,
+      "status": "NEW",
+      "created_at": "2026-06-16T11:06:23.483Z"
+    },
+    {
+      "id": 5,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "+91 98765 43210",
+      "address": "123 Test Street, Apartment 4B",
+      "city": "Chennai",
+      "product_type": "WINDOW",
+      "product_style": "Sliding",
+      "width": 1500,
+      "height": 1500,
+      "quantity": 1,
+      "glass_type": "Clear Glass",
+      "frame_color": "White",
+      "hardware_quality": "Standard Quality",
+      "product_cost": 16875,
+      "installation_cost": 1800,
+      "gst": 3361.5,
+      "total_estimate": 22036.5,
+      "status": "NEW",
+      "created_at": "2026-06-16T11:08:20.945Z"
+    }
+  ],
+  "system_config": [
+    {
+      "key": "window_sliding_base_rate",
+      "value": "7500",
+      "description": "Base rate per sqm for sliding windows (INR)"
+    },
+    {
+      "key": "window_casement_base_rate",
+      "value": "8500",
+      "description": "Base rate per sqm for casement windows (INR)"
+    },
+    {
+      "key": "window_fixed_base_rate",
+      "value": "6000",
+      "description": "Base rate per sqm for fixed windows (INR)"
+    },
+    {
+      "key": "window_tilt_turn_base_rate",
+      "value": "9500",
+      "description": "Base rate per sqm for tilt & turn windows (INR)"
+    },
+    {
+      "key": "window_bay_base_rate",
+      "value": "11000",
+      "description": "Base rate per sqm for bay windows (INR)"
+    },
+    {
+      "key": "door_sliding_base_rate",
+      "value": "10000",
+      "description": "Base rate per sqm for sliding doors (INR)"
+    },
+    {
+      "key": "door_french_base_rate",
+      "value": "12000",
+      "description": "Base rate per sqm for French doors (INR)"
+    },
+    {
+      "key": "door_casement_base_rate",
+      "value": "11000",
+      "description": "Base rate per sqm for casement doors (INR)"
+    },
+    {
+      "key": "door_balcony_base_rate",
+      "value": "10500",
+      "description": "Base rate per sqm for balcony doors (INR)"
+    },
+    {
+      "key": "door_entrance_base_rate",
+      "value": "14000",
+      "description": "Base rate per sqm for entrance doors (INR)"
+    },
+    {
+      "key": "glass_clear_multiplier",
+      "value": "1.0",
+      "description": "Multiplier for clear glass"
+    },
+    {
+      "key": "glass_toughened_multiplier",
+      "value": "1.25",
+      "description": "Multiplier for toughened glass"
+    },
+    {
+      "key": "glass_double_glazed_multiplier",
+      "value": "1.5",
+      "description": "Multiplier for double glazed glass"
+    },
+    {
+      "key": "color_white_multiplier",
+      "value": "1.0",
+      "description": "Multiplier for white frames"
+    },
+    {
+      "key": "color_black_multiplier",
+      "value": "1.15",
+      "description": "Multiplier for black frames"
+    },
+    {
+      "key": "color_brown_multiplier",
+      "value": "1.15",
+      "description": "Multiplier for brown frames"
+    },
+    {
+      "key": "color_custom_multiplier",
+      "value": "1.25",
+      "description": "Multiplier for custom laminated colors"
+    },
+    {
+      "key": "hardware_standard_multiplier",
+      "value": "1.0",
+      "description": "Multiplier for standard hardware"
+    },
+    {
+      "key": "hardware_premium_multiplier",
+      "value": "1.3",
+      "description": "Multiplier for premium hardware"
+    },
+    {
+      "key": "installation_base_rate",
+      "value": "800",
+      "description": "Installation base rate per square meter (INR)"
+    },
+    {
+      "key": "gst_rate_percent",
+      "value": "18",
+      "description": "GST percentage rate"
+    }
+  ]
+}
