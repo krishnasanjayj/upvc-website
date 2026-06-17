@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { QuotationsRepository, ConfigRepository } from '../../../lib/db';
 import { requireAuth } from '../../../lib/auth';
+import { sendEmailNotification } from '../../../lib/mailer';
 
 // Helper to calculate pricing on the server side
 async function calculateQuotation(params: {
@@ -101,6 +102,71 @@ export async function POST(req: NextRequest) {
       installation_cost: pricing.installationCost,
       gst: pricing.gst,
       total_estimate: pricing.totalEstimate,
+    });
+
+    // Send email alert to admin
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@upvcwebsite.com';
+    const adminEmailSubject = `New Smart Quotation Request from ${name}`;
+    const adminEmailHtml = `
+      <h3>New Smart Quotation Request Received</h3>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Location:</strong> ${address}, ${city}</p>
+      <hr />
+      <h4>Product Details:</h4>
+      <ul>
+        <li><strong>Item Type:</strong> ${productType}</li>
+        <li><strong>Style:</strong> ${productStyle}</li>
+        <li><strong>Dimensions:</strong> ${width}mm (W) x ${height}mm (H)</li>
+        <li><strong>Quantity:</strong> ${quantity}</li>
+        <li><strong>Glass Type:</strong> ${glassType}</li>
+        <li><strong>Frame Color:</strong> ${frameColor}</li>
+        <li><strong>Hardware Quality:</strong> ${hardwareQuality}</li>
+      </ul>
+      <hr />
+      <h4>Cost Estimate:</h4>
+      <p><strong>Product Cost:</strong> INR ${pricing.productCost.toLocaleString('en-IN')}</p>
+      <p><strong>Installation Cost:</strong> INR ${pricing.installationCost.toLocaleString('en-IN')}</p>
+      <p><strong>GST (18%):</strong> INR ${pricing.gst.toLocaleString('en-IN')}</p>
+      <p><strong>Total Estimate:</strong> <strong>INR ${pricing.totalEstimate.toLocaleString('en-IN')}</strong></p>
+      <p><em>Note: Final quotation may vary after site inspection.</em></p>
+    `;
+
+    // Send email confirmation to customer
+    const customerEmailSubject = `Your uPVC Doors & Windows Quotation Estimate`;
+    const customerEmailHtml = `
+      <h3>Hello ${name},</h3>
+      <p>Thank you for using our Smart Quotation Calculator. Here is the estimated quotation for your requirements:</p>
+      <hr />
+      <h4>Product Details:</h4>
+      <ul>
+        <li><strong>Item Type:</strong> ${productType}</li>
+        <li><strong>Style:</strong> ${productStyle}</li>
+        <li><strong>Dimensions:</strong> ${width}mm (W) x ${height}mm (H)</li>
+        <li><strong>Quantity:</strong> ${quantity}</li>
+        <li><strong>Glass Type:</strong> ${glassType}</li>
+        <li><strong>Frame Color:</strong> ${frameColor}</li>
+        <li><strong>Hardware Quality:</strong> ${hardwareQuality}</li>
+      </ul>
+      <hr />
+      <h4>Cost Estimate:</h4>
+      <p><strong>Product Cost:</strong> INR ${pricing.productCost.toLocaleString('en-IN')}</p>
+      <p><strong>Installation Cost:</strong> INR ${pricing.installationCost.toLocaleString('en-IN')}</p>
+      <p><strong>GST (18%):</strong> INR ${pricing.gst.toLocaleString('en-IN')}</p>
+      <p><strong>Total Estimate:</strong> <strong>INR ${pricing.totalEstimate.toLocaleString('en-IN')}</strong></p>
+      <hr />
+      <p>Our team will contact you shortly to schedule a free site measurement and finalize the quote.</p>
+      <p>Best regards,<br /><strong>CN Doors & Windows Team</strong></p>
+      <p><em>Note: This is a system-generated estimate based on your selections. Final pricing is subject to physical site dimensions and configurations.</em></p>
+    `;
+
+    sendEmailNotification(adminEmail, adminEmailSubject, adminEmailHtml).catch((err) => {
+      console.error('Failed to send admin quotation email:', err);
+    });
+
+    sendEmailNotification(email, customerEmailSubject, customerEmailHtml).catch((err) => {
+      console.error('Failed to send customer quotation email:', err);
     });
 
     return NextResponse.json(

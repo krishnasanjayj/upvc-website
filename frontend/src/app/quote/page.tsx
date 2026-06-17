@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Calculator, Sparkles, AlertCircle, Phone, ArrowLeft, ArrowRight, Check } from 'lucide-react';
+import { Calculator, Sparkles, AlertCircle, Phone, ArrowLeft, ArrowRight, Check, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../../components/LanguageContext';
 import { ApiService } from '../../utils/api';
 
@@ -211,6 +211,33 @@ function QuoteFormContent() {
     }
   };
 
+  const getWhatsAppShareUrl = () => {
+    const message = `Hello CN Doors & Windows! Here is my calculated Smart Quotation estimate:
+
+👤 *Customer Name*: ${fullName}
+📞 *Phone*: ${phone}
+📧 *Email*: ${email}
+📍 *Location*: ${address}, ${city}
+
+📐 *Product*: ${productType} (${productStyle})
+📏 *Dimensions*: ${width}mm (W) x ${height}mm (H)
+🔢 *Quantity*: ${quantity}
+🎨 *Color*: ${frameColor}
+💎 *Glass*: ${glassType}
+🛠️ *Hardware*: ${hardwareQuality}
+
+💰 *Estimated Costs*:
+• Product Cost: ₹${productCost.toLocaleString('en-IN')}
+• Installation Cost: ₹${installationCost.toLocaleString('en-IN')}
+• GST (18%): ₹${gstAmount.toLocaleString('en-IN')}
+━━━━━━━━━━━━━━━
+✨ *Total Estimated Quote*: ₹${totalCost.toLocaleString('en-IN')}
+
+Please contact me to discuss options and schedule a site measurement.`;
+
+    return `https://wa.me/919445477574?text=${encodeURIComponent(message)}`;
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8 relative">
       
@@ -248,28 +275,39 @@ function QuoteFormContent() {
             <p><strong>Size:</strong> {width}mm x {height}mm (Qty: {quantity})</p>
             <p><strong>Estimated Total:</strong> <span className="font-extrabold text-amber-600">INR {totalCost.toLocaleString('en-IN')}</span></p>
           </div>
-          <div className="flex gap-4">
-            <button
-              onClick={() => {
-                setSuccess(false);
-                setStep(1);
-                setFullName('');
-                setPhone('');
-                setEmail('');
-                setAddress('');
-                setCity('');
-              }}
-              className="flex-1 py-3 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-md transition-colors"
-            >
-              Calculate Another Window
-            </button>
+          <div className="space-y-3">
             <a
-              href="tel:+919445477574"
-              className="flex-1 py-3 text-xs font-bold border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-xl transition-colors inline-flex items-center justify-center"
+              href={getWhatsAppShareUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition-colors inline-flex items-center justify-center space-x-2 text-xs"
             >
-              <Phone className="h-4 w-4 mr-2" />
-              Call Support
+              <MessageCircle className="h-5 w-5 fill-current" />
+              <span>Share Quotation on WhatsApp</span>
             </a>
+            <div className="flex gap-4">
+              <button
+                onClick={() => {
+                  setSuccess(false);
+                  setStep(1);
+                  setFullName('');
+                  setPhone('');
+                  setEmail('');
+                  setAddress('');
+                  setCity('');
+                }}
+                className="flex-1 py-3 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-md transition-colors"
+              >
+                Calculate Another Window
+              </button>
+              <a
+                href="tel:+919445477574"
+                className="flex-1 py-3 text-xs font-bold border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-xl transition-colors inline-flex items-center justify-center"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Call Support
+              </a>
+            </div>
           </div>
         </div>
       ) : (
