@@ -56,9 +56,10 @@ function getPool(): Pool | null {
   if (!dbUrl) return null;
 
   if (!pgPool) {
+    const isLocal = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
     pgPool = new Pool({
       connectionString: dbUrl,
-      ssl: { rejectUnauthorized: false },
+      ssl: isLocal ? false : { rejectUnauthorized: false },
       max: 5,
     });
   }
