@@ -21,7 +21,7 @@ export default function FloatingActions() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const whatsappUrl = 'https://wa.me/919876543210?text=Hi!%20I%20am%20interested%20in%20getting%20a%20quote%20for%20uPVC%20Doors%20and%20Windows.';
+  const whatsappUrl = 'https://wa.me/919445477574?text=Hi!%20I%20am%20interested%20in%20getting%20a%20quote%20for%20uPVC%20Doors%20and%20Windows.';
 
   return (
     <>
