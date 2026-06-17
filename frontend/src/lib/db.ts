@@ -204,8 +204,12 @@ async function ensurePgTables(pool: Pool) {
 async function getDb(): Promise<{ pool: Pool } | { mem: true }> {
   const pool = getPool();
   if (pool) {
-    await ensurePgTables(pool);
-    return { pool };
+    try {
+      await ensurePgTables(pool);
+      return { pool };
+    } catch (err) {
+      console.error('Failed to initialize PostgreSQL connection, falling back to in-memory database:', err);
+    }
   }
   ensureMemDbInitialized();
   return { mem: true };
