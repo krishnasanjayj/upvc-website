@@ -212,7 +212,7 @@ function QuoteFormContent() {
   };
 
   const getWhatsAppShareUrl = () => {
-    const message = `Hello CN Doors & Windows! Here is my calculated Smart Quotation estimate:
+    const message = `Hello! Here is your calculated uPVC Doors & Windows Smart Quotation estimate:
 
 👤 *Customer Name*: ${fullName}
 📞 *Phone*: ${phone}
@@ -233,9 +233,14 @@ function QuoteFormContent() {
 ━━━━━━━━━━━━━━━
 ✨ *Total Estimated Quote*: ₹${totalCost.toLocaleString('en-IN')}
 
-Please contact me to discuss options and schedule a site measurement.`;
+Thank you! Feel free to reply if you have any questions or to schedule a physical site measurement.`;
 
-    return `https://wa.me/919445477574?text=${encodeURIComponent(message)}`;
+    // Clean phone number for WhatsApp url (digits only)
+    const cleanedPhone = phone.replace(/\D/g, '');
+    // Default to prefixing with '91' (India) if it's 10 digits
+    const targetPhone = cleanedPhone.length === 10 ? `91${cleanedPhone}` : cleanedPhone;
+
+    return `https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`;
   };
 
   return (
