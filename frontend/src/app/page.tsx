@@ -3,15 +3,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  ShieldCheck, 
-  Wrench, 
-  CloudSun, 
-  VolumeX, 
-  Coins, 
-  Flame, 
-  ArrowRight, 
-  Phone, 
+import {
+  ShieldCheck,
+  Wrench,
+  CloudSun,
+  VolumeX,
+  Coins,
+  Flame,
+  ArrowRight,
+  Phone,
   MessageSquare,
   ChevronDown,
   ChevronUp
@@ -106,7 +106,7 @@ export default function Home() {
 
   return (
     <div className="space-y-16">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden">
         {/* Background Image */}
@@ -119,7 +119,7 @@ export default function Home() {
             priority
           />
         </div>
-        
+
         {/* Backdrop Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-slate-950/40 z-0" />
 
@@ -134,7 +134,7 @@ export default function Home() {
           <p className="mx-auto max-w-2xl text-lg text-slate-300 font-semibold sm:text-xl">
             {t('hero.subtitle')}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6 max-w-lg mx-auto">
             <Link
               href="/quote"
@@ -143,7 +143,7 @@ export default function Home() {
               {t('hero.ctaQuote')}
               <ArrowRight className="h-5 w-5 ml-2" />
             </Link>
-            
+
             <a
               href="tel:+91 9445477574"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-slate-800 px-6 py-4 text-base font-bold text-white shadow-md transition-all duration-200 hover:bg-slate-700 hover:scale-102 border border-slate-700"
@@ -151,7 +151,7 @@ export default function Home() {
               <Phone className="h-5 w-5 mr-2 text-blue-400" />
               {t('hero.ctaCall')}
             </a>
-            
+
             <a
               href="https://wa.me/919445477574"
               target="_blank"
@@ -179,8 +179,8 @@ export default function Home() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="relative flex flex-col p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-blue-500/30"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-950/40 mb-4">
@@ -289,7 +289,7 @@ export default function Home() {
         <div className="bg-gradient-to-r from-blue-900 to-slate-900 rounded-3xl p-8 md:p-12 text-center text-white border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl" />
           <div className="absolute left-0 bottom-0 h-48 w-48 rounded-full bg-amber-500/10 blur-3xl" />
-          
+
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">
             <h2 className="text-3xl font-extrabold">Need a Premium uPVC Installation?</h2>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
@@ -303,11 +303,11 @@ export default function Home() {
                 {t('calculator.submitInquiry')}
               </Link>
               <a
-                href="tel:+919876543210"
+                href="tel:+919445477574"
                 className="rounded-xl bg-slate-800 border border-slate-700 px-6 py-3 font-bold hover:bg-slate-700 transition-colors flex items-center"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                +91 98765 43210
+                +91 9445477574
               </a>
             </div>
           </div>
