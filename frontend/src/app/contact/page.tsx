@@ -40,7 +40,7 @@ export default function Contact() {
     }
   };
 
-  const whatsappUrl = 'https://wa.me/919876543210?text=Hello,%20I%20have%2520some%20questions%20about%20your%20uPVC%20products.';
+  const whatsappUrl = 'https://wa.me/919445477574?text=Hello,%20I%20have%2520some%20questions%20about%20your%20uPVC%20products.';
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-12">

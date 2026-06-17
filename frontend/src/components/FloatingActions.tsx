@@ -62,7 +62,7 @@ export default function FloatingActions() {
         <div className="flex w-full items-center justify-around p-2.5">
           {/* Quick Call */}
           <a
-            href="tel:+919876543210"
+            href="tel:+919445477574"
             className="flex flex-col items-center justify-center flex-1 py-1 text-slate-700 dark:text-slate-200 active:scale-95 transition-transform"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-blue-600 dark:bg-slate-800 dark:text-blue-400">
