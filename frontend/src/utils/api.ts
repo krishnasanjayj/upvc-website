@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 // Helper to get authorization header
 function getAuthHeaders(): Record<string, string> {
@@ -150,6 +150,22 @@ export const ApiService = {
   // Export Leads to Excel (downloads file)
   async downloadExcelReport() {
     const token = localStorage.getItem('upvc_admin_token');
-    window.open(`${API_BASE_URL}/quotes/export?token=${token || ''}`, '_blank');
+    const response = await fetch(`${API_BASE_URL}/quotes/export`, {
+      headers: {
+        'Authorization': `Bearer ${token || ''}`,
+      },
+    });
+    if (!response.ok) {
+      throw new Error('Failed to download report');
+    }
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'uPVC_Leads_Report.xlsx';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
   }
 };
