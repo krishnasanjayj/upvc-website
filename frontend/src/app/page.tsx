@@ -145,7 +145,7 @@ export default function Home() {
             </Link>
             
             <a
-              href="tel:+919876543210"
+              href="tel:+91 9445477574"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-slate-800 px-6 py-4 text-base font-bold text-white shadow-md transition-all duration-200 hover:bg-slate-700 hover:scale-102 border border-slate-700"
             >
               <Phone className="h-5 w-5 mr-2 text-blue-400" />
@@ -153,7 +153,7 @@ export default function Home() {
             </a>
             
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919445477574"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-green-600 px-6 py-4 text-base font-bold text-white shadow-md transition-all duration-200 hover:bg-green-700 hover:scale-102"

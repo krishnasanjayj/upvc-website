@@ -220,13 +220,13 @@ export default function Contact() {
 
       {/* Embedded Google Map Frame */}
       <div className="w-full h-80 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.13689408933!2d80.15579997455018!3d13.090538912275727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263ca9e285d85%3A0xc3fecff0e4d0a649!2sSIDCO%20Industrial%20Estate%252C%20Ambattur%252C%20Chennai%252C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1718131333333!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300.0516203182048!2d77.28225661283284!3d11.183995955727967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba903bc9b759587%3A0xfcb28af12277b523!2sCN%20DOORS%20%26%20WINDOWS!5e1!3m2!1sen!2sin!4v1781676354693!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen 
+          loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Globe, Sun, Moon, PhoneCall } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import Logo from './Logo';
+
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -75,11 +77,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white font-bold text-lg shadow-md">
-            uP
-          </div>
+          <Logo size={40} />
           <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-600 to-amber-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-amber-500">
-            Shasti Doors and Windows
+            Sri Sasti Doors and Windows
           </span>
         </Link>
 

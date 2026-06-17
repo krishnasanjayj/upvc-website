@@ -66,8 +66,8 @@ export default function BeforeAfterSlider() {
           {/* Before Image (Background) */}
           <div className="absolute inset-0 h-full w-full">
             <Image
-              src="/images/before-window.png"
-              alt="Before - Old Wood Window"
+              src="/images/construction_building.png"
+              alt="Before - Building Under Construction"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 800px"
@@ -85,8 +85,8 @@ export default function BeforeAfterSlider() {
           >
             <div className="absolute inset-0 h-[300px] md:h-[450px] w-full min-w-[340px] md:min-w-[800px]">
               <Image
-                src="/images/after-window.png"
-                alt="After - Premium uPVC Window"
+                src="/images/completed_building.png"
+                alt="After - Completed Building with Premium uPVC Windows"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"

@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import Logo from './Logo';
+
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -16,11 +18,9 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-600 text-white font-bold text-base">
-                uP
-              </div>
+              <Logo size={32} />
               <span className="font-bold text-lg text-white tracking-tight">
-                Shasti Doors and Windows
+                Sri Sasti Doors and Windows
               </span>
             </Link>
             <p className="text-sm text-slate-400">
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Shasti Doors and Windows. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sri Sasti Doors and Windows. All rights reserved.</p>
           <div className="flex space-x-4">
             <Link href="/contact" className="hover:underline hover:text-slate-400">{t('nav.contact')}</Link>
             <Link href="/admin" className="hover:underline hover:text-slate-400">{t('nav.admin')}</Link>
